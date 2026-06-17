@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+	x:Class="TheButterflyProjectMobileClient.AppShell"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:TheButterflyProjectMobileClient"
+	xmlns:views="clr-namespace:TheButterflyProjectMobileClient.Views"
+    FlyoutIcon="logoonlynobck.png"
+    Shell.BackgroundColor="{x:StaticResource Primary}"
+	Title="TheButterflyProjectMobileClient">    
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="300">
+            <Image Aspect="AspectFill" Source="logodarknobck.png"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+    <FlyoutItem
+		Title="Home"
+		Route="HomePage"
+        Icon="logoonly.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem
+		Title="Library"
+		Route="LibraryPage"
+        Icon="book.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:LibraryPage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem
+		Title="Music"
+		Route="MusicPage"
+        Icon="music.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:MusicPage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem
+		Title="Synchro"
+		Route="SynchroPage"
+        Icon="synchro.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:SynchroPage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem
+		Title="Paramètres"
+		Route="SettingsPage"
+        Icon="tools.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}"/>
+        </Tab>
+    </FlyoutItem>
+</Shell>
